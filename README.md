@@ -2,37 +2,8 @@
 **GitHub:** [elforestal](https://github.com/elforestal)
 **LinkedIn:** [linkedin.com/in/forestal](https://linkedin.com/in/forestal)
 
-```mermaid
-flowchart TD
-    DEV["Local Machine<br/>main.tf configuration"]
-    INIT["terraform init<br/>download provider, set up state"]
-    PLAN["terraform plan<br/>preview changes"]
-    APPLY["terraform apply<br/>provision resources"]
+<img width="611" height="819" alt="image" src="https://github.com/user-attachments/assets/872dabe4-7e2b-48e8-8af9-c3f260e46922" />
 
-    DEV --> INIT --> PLAN --> APPLY
-
-    subgraph AWS["AWS Account"]
-        subgraph S3["Amazon S3"]
-            BUCKET["S3 Bucket<br/>Tag: Environment = Dev"]
-            PAB["Public Access Block<br/>all 4 settings = true"]
-            OBJECT["S3 Object<br/>uploaded file"]
-        end
-    end
-
-    APPLY -->|creates| BUCKET
-    APPLY -->|creates| PAB
-    APPLY -->|uploads| OBJECT
-    PAB -.->|secures| BUCKET
-    OBJECT -->|stored in| BUCKET
-
-    style DEV fill:#f3e8fd,stroke:#a142f4,color:#000
-    style INIT fill:#e8f0fe,stroke:#4285f4,color:#000
-    style PLAN fill:#e8f0fe,stroke:#4285f4,color:#000
-    style APPLY fill:#e8f0fe,stroke:#4285f4,color:#000
-    style BUCKET fill:#e6f4ea,stroke:#34a853,color:#000
-    style PAB fill:#fce8e6,stroke:#ea4335,color:#000
-    style OBJECT fill:#fef7e0,stroke:#f9ab00,color:#000
-```
 
 ---
 
