@@ -18,11 +18,16 @@ I'll also codify security into the deployment — the bucket includes a public-a
 I'm doing this project to build my DevSecOps and IaC skills, applying the security-first thinking from my earlier AWS projects to automated, version-controlled infrastructure. This is how security controls become part of the deployment pipeline rather than manual, easy-to-miss console steps.
 
 ### Tools and concepts
-
-Services I used were Terraform for infrastructure as code, AWS S3 for object storage, AWS IAM for identity and access management, and the AWS CLI to authenticate my local environment to AWS.
-
-Key concepts I learnt include infrastructure as code — defining and version-controlling my cloud resources in main.tf rather than clicking through the console — along with the terraform init, plan, and apply workflow that enforces a prepare, preview, then commit sequence. I also worked with secure-by-default configuration, using an S3 public access block with all four settings enabled so the bucket was never exposed, and resource tagging as the foundation for attribute-based access control.
-On the security side, I reinforced credential hygiene by generating access keys under a dedicated IAM Admin user instead of root.
+→ Terraform — infrastructure as code
+→ AWS S3 🪣 — object storage
+→ AWS IAM 🔐 — identity and access management
+→ AWS CLI ⌨️ — authenticating my local environment to AWS
+💡 Key concepts I learnt
+→ 📄 Infrastructure as code — defining and version-controlling cloud resources in main.tf instead of clicking through the console
+→ 🔄 init → plan → apply workflow — a prepare, preview, then commit sequence that gates changes before they hit live infrastructure
+→ 🔒 Secure-by-default configuration — an S3 public access block with all four settings enabled, so the bucket is never exposed
+→ 🏷️ Resource tagging — Environment = Dev as the foundation for attribute-based access control (ABAC)
+→ 🗝️ Credential hygiene — generating access keys under a dedicated IAM Admin user instead of root
 
 ### Project reflection
 
