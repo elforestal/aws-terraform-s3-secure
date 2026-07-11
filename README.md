@@ -19,18 +19,18 @@ I'm doing this project to build my DevSecOps and IaC skills, applying the securi
 
 **🧰 Services used**
 
-→ **Terraform** — infrastructure as code
-→ **AWS S3** 🪣 — object storage
-→ **AWS IAM** 🔐 — identity and access management
-→ **AWS CLI** ⌨️ — authenticating my local environment to AWS
+- **Terraform** — infrastructure as code
+- 🪣 **AWS S3** — object storage
+- 🔐 **AWS IAM** — identity and access management
+- ⌨️ **AWS CLI** — authenticating my local environment to AWS
 
 **💡 Key concepts I learnt**
 
-→ 📄 **Infrastructure as code** — defining and version-controlling cloud resources in `main.tf` instead of clicking through the console
-→ 🔄 **init → plan → apply workflow** — a prepare, preview, then commit sequence that gates changes before they hit live infrastructure
-→ 🔒 **Secure-by-default configuration** — an S3 public access block with all four settings enabled, so the bucket is never exposed
-→ 🏷️ **Resource tagging** — `Environment = Dev` as the foundation for attribute-based access control (ABAC)
-→ 🗝️ **Credential hygiene** — generating access keys under a dedicated IAM Admin user instead of root
+- 📄 **Infrastructure as code** — defining and version-controlling cloud resources in `main.tf` instead of clicking through the console
+- 🔄 **init → plan → apply workflow** — a prepare, preview, then commit sequence that gates changes before they hit live infrastructure
+- 🔒 **Secure-by-default configuration** — an S3 public access block with all four settings enabled, so the bucket is never exposed
+- 🏷️ **Resource tagging** — `Environment = Dev` as the foundation for attribute-based access control (ABAC)
+- 🗝️ **Credential hygiene** — generating access keys under a dedicated IAM Admin user instead of root
 
 ### Project reflection
 
